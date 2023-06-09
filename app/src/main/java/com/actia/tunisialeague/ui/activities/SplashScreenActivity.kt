@@ -1,10 +1,10 @@
 package com.actia.tunisialeague.ui.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import androidx.appcompat.app.AppCompatActivity
 import com.actia.tunisialeague.R
 import com.actia.tunisialeague.utils.IS_REMEMBERED
 import com.actia.tunisialeague.utils.PREF_FILE_LOGIN

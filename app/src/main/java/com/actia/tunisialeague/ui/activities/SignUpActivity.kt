@@ -1,13 +1,13 @@
 package com.actia.tunisialeague.ui.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Patterns
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.actia.tunisialeague.R
 import com.actia.tunisialeague.models.User
 import com.actia.tunisialeague.utils.MyDataBase
@@ -107,7 +107,7 @@ class SignUpActivity : AppCompatActivity() {
                 MyDataBase.getInstance(this).userDao().getUserByEmailAndPassword(user.email, user.password).also {
                     if (it == null){
                         MyDataBase.getInstance(this).userDao().insert(user)
-                        startActivity(Intent(this@SignUpActivity, HomeActivity::class.java))
+                        startActivity(Intent(this@SignUpActivity, LoginActivity::class.java))
                         finish()
                     }else{
                         Snackbar.make(findViewById(R.id.container), getString(R.string.userExist),
